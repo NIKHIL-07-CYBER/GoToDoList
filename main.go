@@ -75,7 +75,7 @@ func main() {
 		app.Static("/", "./client/dist")
 	}
 
-	log.Fatal(app.Listen("0.0.0.0:" + port))
+	log.Fatal(app.Listen(":" + port))
 
 }
 
