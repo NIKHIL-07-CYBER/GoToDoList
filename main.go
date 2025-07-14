@@ -54,6 +54,10 @@ func main() {
 
 	app := fiber.New()
 
+	app.Get("/", func(c *fiber.Ctx) error {
+        return c.SendString("🚀 Welcome to my Fiber App deployed on Railway!")
+    })
+
 	if os.Getenv("ENV") != "production" {
     app.Use(cors.New(cors.Config{
         AllowOrigins: "http://localhost:5173",
